@@ -8,7 +8,7 @@ Route::get('/', [GameController::class, 'index'])
 
 Route::get('/game/{id}', [GameController::class, 'show'])
     ->whereNumber('id')
-    ->name('game.show');
+    ->name('games.show');
 
 Route::get('/wishlist', [GameController::class, 'wishlist'])
     ->name('wishlist');
@@ -16,10 +16,4 @@ Route::get('/wishlist', [GameController::class, 'wishlist'])
 Route::get('/login', [GameController::class, 'login'])
     ->name('login');
 
-Route::get('/hello', function () {
-    return 'Hello Wishflix';
-});
 
-Route::get('/hello/{name}', function (string $name) {
-    return 'Hello '.$name;
-});

@@ -3,7 +3,7 @@
 @section('title', $game['title'])
 
 @section('styles')
-    @vite('resources/css/home.css')
+    @vite('resources/css/game-detail.css')
 @endsection
 
 @section('content')
@@ -16,7 +16,7 @@
             <div class="wish-detail__veil" aria-hidden="true"></div>
 
             <div class="wish-detail__content">
-                <a class="btn btn-ghost btn-sm" href="/">Retour au catalogue</a>
+                <a class="btn btn-ghost btn-sm" href="{{ route('home') }}">Retour au catalogue</a>
 
                 <p class="wish-detail__kicker">Fiche jeu</p>
                 <h1 class="wish-detail__title">{{ $game['title'] }}</h1>
@@ -48,7 +48,7 @@
 
                 <div class="wish-detail__actions">
                     <button class="btn btn-secondary">Ajouter a la wishlist</button>
-                    <a class="btn btn-outline" href="wishlist.html">Voir ma wishlist</a>
+                    <a class="btn btn-outline" href="{{ route('wishlist') }}">Voir ma wishlist</a>
                 </div>
             </div>
         </section>

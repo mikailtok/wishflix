@@ -11,7 +11,7 @@
         <section class="wish-not-found" aria-labelledby="not-found-title">
             <h1 id="not-found-title">404</h1>
             <p>Oups, cette page n existe pas.</p>
-            <a class="btn btn-primary" href="/">Retourner au catalogue</a>
+            <a class="btn btn-primary" href="{{ route('home') }}">Retourner au catalogue</a>
         </section>
     </main>
 @endsection

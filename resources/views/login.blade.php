@@ -37,7 +37,7 @@
                 <p><strong>Email:</strong> demo@wishflix.com</p>
                 <p><strong>Mot de passe:</strong> demo1234</p>
 
-                <a class="link link-primary" href="/">Retour au catalogue</a>
+                <a class="link link-primary" href="{{ route('home') }}">Retour au catalogue</a>
             </div>
         </div>
     </section>

@@ -125,7 +125,7 @@
                             </p>
 
                             <div class="card-actions game-card__actions">
-                                <a class="btn btn-sm btn-ghost" href="{{ route('game.show', $id) }}"
+                                <a class="btn btn-sm btn-ghost" href="{{ route('games.show', $id) }}"
                                     aria-label="Voir les details de {{ $game['title'] }}">
                                     Details
                                 </a>
