@@ -1,31 +1,13 @@
 <?php
 
+use App\Http\Controllers\GameController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\QuestController;
 
+Route::get('/', [GameController::class, 'index'])->name('home');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/game/{id}', [GameController::class, 'show'])
+    ->whereNumber('id')
+    ->name('games.show');
 
-Route::get('/hello', function() {
-    return 'Hello world!';
-});
-
-Route::get('/hello/{name}', function(string $name) {
-    return 'Hello ' . $name;
-});
-
-Route::get('/quest', function() {
-    return 'Liste des quêtes';
-});
-
-// Route::get('/quest/{id}', function(string $id) {
-//     validator(['id' => $id], [
-//         'id' => 'required|integer|min:1'
-//     ])->validate();
-
-//     return 'Détails de la quête ' . $id;
-// });
-
-Route::get('/quests/{id}', [QuestController::class, 'show'])->whereNumber('id')->name('quests.show');
+Route::view('/wishlist', 'wishlist')->name('wishlist');
+Route::view('/login', 'login')->name('login');
